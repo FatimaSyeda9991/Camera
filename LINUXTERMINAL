@@ -1,0 +1,7 @@
+sudo dpkg -i arducam-nvidia-l4t-kernel-t234-nx-5.15.148-tegra-36.4.3-20250205154605_arm64_imx519.deb
+sudo reboot
+
+
+
+ls /dev/video*
+v4l2-ctl --list-devices
