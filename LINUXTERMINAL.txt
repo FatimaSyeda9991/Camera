@@ -5,3 +5,15 @@ sudo reboot
 
 ls /dev/video*
 v4l2-ctl --list-devices
+
+
+sudo dpkg -r arducam-nvidia-l4t-kernel
+
+wget https://github.com/ArduCAM/Jetson_L4T_Kernel/releases/download/v36.4.3/arducam-nvidia-l4t-kernel-t234-nx-5.15.148-tegra-36.4.3-20250205154605_arm64_imx519.deb
+
+sudo dpkg -i arducam-nvidia-l4t-kernel-t234-nx-5.15.148-tegra-36.4.3-20250205154605_arm64_imx519.deb
+
+# Run dmesg with sudo
+sudo dmesg | grep -i camera
+sudo dmesg | grep -i imx
+sudo dmesg | grep -i arducam
